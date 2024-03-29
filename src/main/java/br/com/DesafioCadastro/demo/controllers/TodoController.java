@@ -2,6 +2,7 @@ package br.com.DesafioCadastro.demo.controllers;
 
 import br.com.DesafioCadastro.demo.entities.Todo;
 import br.com.DesafioCadastro.demo.services.TodoService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -35,9 +36,11 @@ public class TodoController {
 
     }
 
-
-
-
-
+    // Endpoint para buscar um
+    @GetMapping("/{id}")
+    public ResponseEntity<Todo> findById(@PathVariable Long id) {
+        Todo todo = todoService.findById(id);
+        return ResponseEntity.ok(todo);
+    }
 
 }

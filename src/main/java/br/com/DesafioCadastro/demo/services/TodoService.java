@@ -33,5 +33,11 @@ public class TodoService {
        return list();
     }
 
+    // Método para buscar por ID
+    public Todo findById(Long id) {
+        return todoRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Todo não encontrado com o ID: " + id));
+    }
+
 
 }
