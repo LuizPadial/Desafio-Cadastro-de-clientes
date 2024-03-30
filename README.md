@@ -1,12 +1,13 @@
-#API para gerenciar tarefas (CRUD) que faz parte desse desafio para pessoas desenvolvedoras backend júnior, que se candidatam para a Simplify.
-Tecnologias
+# API para gerenciar tarefas (CRUD) que faz parte desse desafio para pessoas desenvolvedoras backend júnior, que se candidatam para a Simplify.
+
+##Tecnologias
 Spring Boot
 Spring MVC
 Spring Data JPA
 SpringDoc OpenAPI 3
 Mysql
 
-Práticas adotadas:
+### Práticas adotadas:
 SOLID, DRY, YAGNI, KISS
 API REST
 Consultas com Spring Data JPA
@@ -24,7 +25,7 @@ $ java -jar target/todolist-0.0.1-SNAPSHOT.jar
 A API poderá ser acessada em localhost:8080. <br>
 O Swagger poderá ser visualizado em localhost:8080/swagger-ui.html
 
-Criar tarefa
+### Criar tarefa
 
 ```
 $ http POST :8080/todos nome="Todo 1" descricao="Desc Todo 1" prioridade=1
@@ -37,12 +38,13 @@ $ http POST :8080/todos nome="Todo 1" descricao="Desc Todo 1" prioridade=1
     "prioridade": 1,
     "realizado": false
   }
-] ```
+]
+```    
 
-Listar Tarefas
+### Listar Tarefas
 
-
-``` $ http GET :8080/todos
+```
+$ http GET :8080/todos
 [
   {
     "descricao": "Desc Todo 1",
@@ -51,13 +53,13 @@ Listar Tarefas
     "prioridade": 1,
     "realizado": false
   }
-]  ```
+] 
+```
 
+### Atualizar Tarefa
 
-Atualizar Tarefa
-
-
-```$ http PUT :8080/todos/1 nome="Todo 1 Up" descricao="Desc Todo 1 Up" prioridade=2
+```
+$ http PUT :8080/todos/1 nome="Todo 1 Up" descricao="Desc Todo 1 Up" prioridade=2
 
 [
   {
@@ -67,12 +69,12 @@ Atualizar Tarefa
     "prioridade": 2,
     "realizado": false
   }
-] ```
+] 
+```
+### Remover Tarefa
 
-Remover Tarefa
-
-
-```http DELETE :8080/todos/1
+```
+http DELETE :8080/todos/1
 
 [ ]
 ```
