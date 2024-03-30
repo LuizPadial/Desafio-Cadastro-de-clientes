@@ -2,6 +2,7 @@ package br.com.DesafioCadastro.demo.controllers;
 
 import br.com.DesafioCadastro.demo.entities.Todo;
 import br.com.DesafioCadastro.demo.services.TodoService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +17,7 @@ public class TodoController {
         this.todoService = todoService;
     }
     @PostMapping
-    List<Todo> create(@RequestBody Todo todo){
+    List<Todo> create(@RequestBody @Valid Todo todo){
        return todoService.create(todo);
     }
     @GetMapping
@@ -36,7 +37,7 @@ public class TodoController {
 
     }
 
-    // Endpoint para buscar um
+    // Endpoint para buscar por ID
     @GetMapping("/{id}")
     public ResponseEntity<Todo> findById(@PathVariable Long id) {
         Todo todo = todoService.findById(id);
