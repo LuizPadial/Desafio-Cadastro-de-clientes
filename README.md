@@ -1,6 +1,6 @@
 # API para gerenciar tarefas (CRUD) que faz parte desse desafio para pessoas desenvolvedoras backend júnior, que se candidatam para a Simplify.
 
-##Tecnologias<br>
+## Tecnologias<br>
 Spring Boot<br>
 Spring MVC<br>
 Spring Data JPA<br>
