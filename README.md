@@ -1,11 +1,11 @@
 # API para gerenciar tarefas (CRUD) que faz parte desse desafio para pessoas desenvolvedoras backend júnior, que se candidatam para a Simplify.
 
-##Tecnologias
-Spring Boot
-Spring MVC
-Spring Data JPA
-SpringDoc OpenAPI 3
-Mysql
+##Tecnologias<br>
+Spring Boot<br>
+Spring MVC<br>
+Spring Data JPA<br>
+SpringDoc OpenAPI 3<br>
+Mysql<br>
 
 ### Práticas adotadas:
 SOLID, DRY, YAGNI, KISS
